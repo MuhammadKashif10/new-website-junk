@@ -1,0 +1,77 @@
+export const areas: string[] = [
+  "Jumeirah Village Circle",
+  "Dubai Marina",
+  "Business Bay",
+  "Palm Jumeirah",
+  "Dubai Hills Estate",
+  "Arabian Ranches",
+  "Jumeirah",
+  "Al Furjan",
+  "The Springs",
+  "Emirates Hills",
+  "Dubai Investment Park",
+  "Dubai Motor City",
+  "Dubai South",
+  "Dubai Internet City",
+  "The Greens",
+  "Damac Hills",
+  "Mudon",
+  "Remraam",
+  "Dubai Creek Harbour",
+  "Dubai Sports City",
+  "Arabian Ranches 2",
+  "Al Barari",
+  "Damac Hills 2",
+  "Jumeirah 2",
+  "Jumeirah 1",
+  "Dubai Design District",
+  "Jumeirah Golf Estates",
+  "Dubai Production City",
+  "Green Community Village",
+  "The Villa",
+  "Bluewaters Island",
+  "Downtown Dubai",
+  "DIFC",
+  "Jumeirah Beach Residence",
+  "Meydan",
+  "Dubai Silicon Oasis",
+  "Al Quoz",
+  "Nad Al Hamar",
+  "Nad Al Sheba",
+];
+
+// Rough grouping for a nicer display than a flat list.
+export const areaGroups: { title: string; items: string[] }[] = [
+  {
+    title: "Waterfront & Islands",
+    items: ["Palm Jumeirah", "Dubai Marina", "Bluewaters Island", "Jumeirah Beach Residence", "Dubai Creek Harbour"],
+  },
+  {
+    title: "Downtown & City Core",
+    items: ["Downtown Dubai", "Business Bay", "DIFC", "Dubai Design District", "Meydan"],
+  },
+  {
+    title: "Villa Communities",
+    items: [
+      "Emirates Hills", "Arabian Ranches", "Arabian Ranches 2", "Dubai Hills Estate",
+      "Al Barari", "The Villa", "Mudon", "Damac Hills", "Damac Hills 2",
+      "Jumeirah Golf Estates", "Green Community Village", "The Springs",
+    ],
+  },
+  {
+    title: "Jumeirah & Coastal Residential",
+    items: ["Jumeirah", "Jumeirah 1", "Jumeirah 2"],
+  },
+  {
+    title: "New Dubai & Suburbs",
+    items: [
+      "Jumeirah Village Circle", "Al Furjan", "Dubai Investment Park", "Dubai Motor City",
+      "Dubai South", "Dubai Sports City", "Remraam", "Dubai Silicon Oasis",
+      "Nad Al Hamar", "Nad Al Sheba", "Al Quoz",
+    ],
+  },
+  {
+    title: "Business & Tech Districts",
+    items: ["Dubai Internet City", "Dubai Production City", "The Greens"],
+  },
+];

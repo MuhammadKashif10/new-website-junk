@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Once the production domain is live, make this an absolute URL, e.g.
+# Sitemap: https://marhabaclearance.ae/sitemap.xml
+Sitemap: /sitemap.xml
