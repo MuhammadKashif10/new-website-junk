@@ -7,7 +7,8 @@ import { reviews, reviewsSummary, type Review } from "@/config/reviews";
 
 function Stars({ rating }: { rating: number }) {
   return (
-    <div className="flex items-center gap-0.5" aria-label={`${rating} out of 5 stars`}>
+    <div className="flex items-center gap-0.5">
+      <span className="sr-only">{`${rating} out of 5 stars`}</span>
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
