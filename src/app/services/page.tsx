@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
 import { services } from "@/config/services";
+import { absoluteUrl } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Services — Dubai Junk Collection Dubai",
@@ -20,9 +21,33 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", images: [services[0].image.src] },
 };
 
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+    { "@type": "ListItem", position: 2, name: "Services", item: absoluteUrl("/services") },
+  ],
+};
+
+// Machine-readable index of every service, mirroring the visual grid below so
+// agents can enumerate the full catalogue and its URLs from one node.
+const serviceListLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: services.map((s, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: s.title,
+    url: absoluteUrl(`/services/${s.slug}`),
+  })),
+};
+
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceListLd) }} />
       <PageHero
         eyebrow="Services"
         title="Everything we clear, in one place."

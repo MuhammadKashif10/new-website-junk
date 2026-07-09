@@ -3,12 +3,12 @@
 export const site = {
   name: "Dubai Junk Collection",
   tagline: "Dubai's discreet junk removal service",
-  // TODO: replace the placeholder phone/WhatsApp numbers below with the real
-  // business numbers. Every CTA on the site reads from these two values.
-  phone: "+971 50 123 4567",
-  phoneHref: "tel:+971501234567",
-  whatsapp: "+971 50 123 4567",
-  whatsappHref: "https://wa.me/971501234567",
+  // Production business number. Every phone/WhatsApp CTA on the site reads from
+  // these values, so a future change only needs editing here.
+  phone: "+971 55 528 4216",
+  phoneHref: "tel:+971555284216",
+  whatsapp: "+971 55 528 4216",
+  whatsappHref: "https://wa.me/971555284216",
   email: "hello@dubaijunkcollection.com",
   address: "Al Quoz Industrial 3, Dubai, United Arab Emirates",
   hours: "Every day · 7:00 – 22:00",

@@ -59,9 +59,10 @@ const localBusinessLd = {
   url: absoluteUrl("/"),
   logo: absoluteUrl("/icon-512.png"),
   image: absoluteUrl(heroImg.src),
-  telephone: site.phone,
+  telephone: site.phoneHref.replace(/^tel:/, ""),
   email: site.email,
   priceRange: "$$",
+  parentOrganization: { "@id": absoluteUrl("/#organization") },
   address: {
     "@type": "PostalAddress",
     streetAddress: site.address,

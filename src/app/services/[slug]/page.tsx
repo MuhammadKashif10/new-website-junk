@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowUpRight, Check, Phone, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Check, Phone } from "lucide-react";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { CTASection } from "@/components/site/CTASection";
 import { getService, services } from "@/config/services";
 import { site, absoluteUrl } from "@/config/site";
@@ -44,15 +45,28 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
     "@type": "Service",
     name: svc.title,
     description: svc.seoDescription,
+    serviceType: svc.title,
     areaServed: { "@type": "City", name: "Dubai" },
     provider: {
       "@type": "LocalBusiness",
       "@id": absoluteUrl("/#business"),
       name: "Dubai Junk Collection",
-      telephone: site.phone,
+      telephone: site.phoneHref.replace(/^tel:/, ""),
       email: site.email,
       url: absoluteUrl("/"),
     },
+  };
+
+  // Home › Services › <service>. Gives agents an explicit position for this
+  // page within the site hierarchy.
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Services", item: absoluteUrl("/services") },
+      { "@type": "ListItem", position: 3, name: svc.title, item: absoluteUrl(`/services/${svc.slug}`) },
+    ],
   };
 
   const faqLd = svc.faqs.length
@@ -70,6 +84,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {faqLd && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       )}
@@ -95,7 +110,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
                 className="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-ink)] px-6 py-3 text-sm font-medium text-[color:var(--color-cream)]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                <MessageCircle aria-hidden className="h-4 w-4" /> WhatsApp us
+                <WhatsAppIcon aria-hidden className="h-4 w-4" /> WhatsApp us
               </a>
               <a
                 href={site.phoneHref}

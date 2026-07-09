@@ -3,8 +3,11 @@ import type { ReactNode } from "react";
 import { Aleo, Montserrat } from "next/font/google";
 import "./globals.css";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { site } from "@/config/site";
+import { site, absoluteUrl } from "@/config/site";
 import ogImage from "@/assets/hero-main.jpg";
+
+// Phone in bare E.164 form (no "tel:" prefix) for schema.org `telephone`.
+const telephone = site.phoneHref.replace(/^tel:/, "");
 
 // Self-hosted via next/font — no external Google Fonts request, no render-blocking
 // stylesheet, no font-related CLS. Both are variable fonts, so omitting `weight`
@@ -56,6 +59,47 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+// Site-wide structured data. Emitted on every page so agents can resolve the
+// publisher/organization graph from anywhere. `@id`s are stable anchors that
+// page-level nodes (LocalBusiness on the home page, Service on service pages)
+// reference — see the `parentOrganization` link in app/page.tsx.
+const organizationLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": absoluteUrl("/#organization"),
+  name: site.name,
+  url: absoluteUrl("/"),
+  logo: absoluteUrl("/icon-512.png"),
+  image: absoluteUrl(ogImage.src),
+  email: site.email,
+  telephone,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.address,
+    addressLocality: "Dubai",
+    addressCountry: "AE",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone,
+    email: site.email,
+    contactType: "customer service",
+    areaServed: "AE",
+    availableLanguage: ["en", "ar"],
+  },
+};
+
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": absoluteUrl("/#website"),
+  url: absoluteUrl("/"),
+  name: site.name,
+  description,
+  inLanguage: "en",
+  publisher: { "@id": absoluteUrl("/#organization") },
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
@@ -64,6 +108,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           hydrates. This suppresses only <body>'s own attribute diff — real
           mismatches inside the tree are still reported. */}
       <body suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+        />
         <SiteLayout>{children}</SiteLayout>
       </body>
     </html>

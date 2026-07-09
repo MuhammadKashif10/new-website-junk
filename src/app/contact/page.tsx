@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import type { LucideIcon } from "lucide-react";
-import { Phone, MessageCircle, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
+import type { ComponentType, SVGProps } from "react";
+import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { site } from "@/config/site";
 import skylineImg from "@/assets/dubai-skyline.jpg";
 
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 type ContactDetail = {
-  icon: LucideIcon;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
   label: string;
   value: string;
   href?: string;
@@ -30,7 +31,7 @@ type ContactDetail = {
 
 const details: ContactDetail[] = [
   { icon: Phone, label: "Phone", value: site.phone, href: site.phoneHref },
-  { icon: MessageCircle, label: "WhatsApp", value: site.whatsapp, href: site.whatsappHref, accent: true },
+  { icon: WhatsAppIcon, label: "WhatsApp", value: site.whatsapp, href: site.whatsappHref, accent: true },
   { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
   { icon: MapPin, label: "Base", value: site.address },
   { icon: Clock, label: "Hours", value: site.hours },
@@ -84,7 +85,7 @@ export default function Contact() {
                     className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 text-base font-medium text-white transition-transform hover:-translate-y-0.5"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
-                    <MessageCircle aria-hidden className="h-5 w-5" /> WhatsApp Now
+                    <WhatsAppIcon aria-hidden className="h-5 w-5" /> WhatsApp Now
                   </a>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import { site } from "@/config/site";
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function CTASection({
   title = "Ready to reclaim your space?",
@@ -32,7 +33,7 @@ export function CTASection({
               className="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-cream)] px-6 py-3 text-sm font-medium text-[color:var(--color-ink)] transition-transform hover:-translate-y-0.5"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              <MessageCircle aria-hidden className="h-4 w-4" /> WhatsApp us
+              <WhatsAppIcon aria-hidden className="h-4 w-4" /> WhatsApp us
             </a>
             <a
               href={site.phoneHref}
