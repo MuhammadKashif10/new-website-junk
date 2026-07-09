@@ -35,7 +35,7 @@ export function GET() {
     ),
     "",
     "## Booking",
-    `The fastest way to book is a WhatsApp message with a photo of what needs clearing to ${site.phone} for a fixed quote within minutes. Phone calls are welcome on the same number.`,
+    `The fastest way to book is a WhatsApp message with a photo of what needs clearing to ${site.phone} for a fixed price within minutes. Phone calls are welcome on the same number.`,
     "",
   ];
 

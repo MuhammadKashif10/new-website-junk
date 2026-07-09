@@ -12,9 +12,9 @@ import { CTASection } from "@/components/site/CTASection";
 import { Reviews } from "@/components/site/Reviews";
 
 export const metadata: Metadata = {
-  title: "Dubai Junk Collection — Premium Junk Removal in Dubai",
+  title: "Junk Removal Dubai | Premium Junk Removal Services in Dubai",
   description:
-    "Book a discreet, professional junk removal crew across Dubai. Same-day pickups for furniture, appliances, office and villa clearances.",
+    "Professional junk removal in Dubai. Book a discreet, uniformed crew for same-day furniture removal, appliance, office and villa clearances — fixed, upfront pricing across every Dubai community.",
   alternates: { canonical: "/" },
   openGraph: { url: "/", images: [heroImg.src] },
 };
@@ -28,7 +28,7 @@ const stats = [
 
 const whyChoose = [
   { icon: ShieldCheck, title: "Insured, uniformed crew", body: "Every job is handled by a vetted local team in clean uniforms — never day-hires." },
-  { icon: Clock, title: "Same-day availability", body: "Book before noon and we'll usually be with you the same afternoon." },
+  { icon: Clock, title: "Same-day availability", body: "Book before noon and we'll usually be with you the same afternoon for most junk removal jobs." },
   { icon: Truck, title: "Right-sized fleet", body: "From single-item pickups to full villa cleanouts, we send the correct truck the first time." },
   { icon: HeartHandshake, title: "Handled with care", body: "Reusable items are routed to local charities. Your walls, lifts and floors stay protected." },
 ];
@@ -39,14 +39,14 @@ const benefits = [
   "Full disassembly of beds, wardrobes and modular pieces",
   "English & Arabic-speaking crew",
   "Building-management paperwork handled for you",
-  "Responsible disposal & donation partners",
+  "Responsible waste disposal, recycling & donation partners",
 ];
 
 const faqs = [
-  { q: "How does pricing work?", a: "We price by volume, not by weight. Share a couple of photos on WhatsApp and we'll send a fixed price back within minutes — no site visit needed for most jobs." },
-  { q: "Do you cover all of Dubai?", a: "Yes. From Palm Jumeirah and Downtown to Arabian Ranches, Dubai Hills and beyond — we cover every major residential community." },
-  { q: "Can you come today?", a: "Very often, yes. Same-day pickups are our specialty for single items and small clear-outs. Larger villa jobs typically book 24–48 hours ahead." },
-  { q: "What happens to the items?", a: "Anything reusable is donated to our partner charities. Everything else is separated for recycling or taken to licensed disposal sites." },
+  { q: "How does junk removal pricing work in Dubai?", a: "We price by volume, not by weight. Share a couple of photos on WhatsApp and we'll send a fixed price for your junk removal in Dubai within minutes — no site visit needed for most jobs." },
+  { q: "Do you cover all of Dubai?", a: "Yes. From Palm Jumeirah and Downtown to Arabian Ranches, Dubai Hills and beyond, we cover every major residential community — so professional junk removal near you is only a message away." },
+  { q: "Can you come today?", a: "Very often, yes. Same-day junk pickup is our specialty for single items and small clear-outs. Larger villa jobs typically book 24–48 hours ahead." },
+  { q: "What happens to the items you remove?", a: "Anything reusable is donated to our partner charities. Everything else is separated for recycling or handled through responsible waste collection and licensed disposal — so your rubbish and garbage removal in Dubai stays clean and accountable." },
   { q: "Is my building's permission needed?", a: "For some towers, yes — we handle the paperwork with the management office on your behalf." },
 ];
 
@@ -55,7 +55,7 @@ const localBusinessLd = {
   "@type": "LocalBusiness",
   "@id": absoluteUrl("/#business"),
   name: "Dubai Junk Collection",
-  description: "Discreet, premium junk removal service across Dubai communities.",
+  description: "Discreet, premium junk removal services across Dubai — furniture removal, garbage collection, appliance and villa clearances with same-day pickups.",
   url: absoluteUrl("/"),
   logo: absoluteUrl("/icon-512.png"),
   image: absoluteUrl(heroImg.src),
@@ -105,12 +105,12 @@ export default function Home() {
               className="mt-5 text-[2.75rem] leading-[1.02] tracking-tight sm:text-6xl md:text-[4.5rem]"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Junk removal,
+              Junk removal in Dubai,
               <br />
               <span className="italic text-[color:var(--color-accent)]">handled quietly.</span>
             </h1>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
-              A calm, uniformed crew who clear your home, office or villa without fuss. Fixed prices, protected floors, and often at your door the same day.
+              A calm, uniformed junk removal crew who clear your home, office or villa across Dubai without fuss. Fixed prices, protected floors, and often at your door the same day.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
@@ -147,7 +147,8 @@ export default function Home() {
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl md:aspect-[5/6]">
                 <Image
                   src={heroImg}
-                  alt="Dubai Junk Collection crew loading furniture outside a Dubai villa at golden hour"
+                  alt="Dubai Junk Collection crew carrying out furniture removal outside a Dubai villa at golden hour"
+                  title="Junk removal in Dubai — Dubai Junk Collection crew at work"
                   fill
                   priority
                   sizes="(min-width: 768px) 50vw, 100vw"
@@ -162,7 +163,7 @@ export default function Home() {
                   <div className="min-w-0">
                     <div className="text-sm font-medium">Booked before noon?</div>
                     <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                      Same-day pickup available in most Dubai communities.
+                      Same-day junk pickup available in most Dubai communities.
                     </p>
                   </div>
                 </div>
@@ -190,7 +191,7 @@ export default function Home() {
           <div className="md:col-span-5">
             <SectionHeader
               eyebrow="Who we are"
-              title="A small Dubai team that treats every home like their own."
+              title="A small Dubai junk removal team that treats every home like their own."
             />
           </div>
           <div className="md:col-span-6 md:col-start-7">
@@ -198,7 +199,8 @@ export default function Home() {
               We started Dubai Junk Collection because clearing out a home in Dubai should feel effortless — not stressful. Today we are the quiet team behind hundreds of villa handovers, apartment refreshes and office refits across the city.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              We show up when we say we will. We protect your space. And we finish the job so completely that the only thing you notice is the room feeling lighter.
+              We show up when we say we will. We protect your space. And we finish the job so completely that the only thing you notice is the room feeling lighter. Whatever needs to go, our Dubai junk removal team makes it easy — just{" "}
+              <Link href="/contact" className="link-underline font-medium">get in touch</Link>.
             </p>
             <Link
               href="/about"
@@ -215,7 +217,7 @@ export default function Home() {
         <div className="container-x">
           <SectionHeader
             eyebrow="Why Dubai Junk Collection"
-            title="Four reasons Dubai homes trust us."
+            title="Four reasons Dubai homes trust our junk removal service."
             align="center"
           />
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -240,14 +242,14 @@ export default function Home() {
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeader
             eyebrow="What we clear"
-            title="Featured services"
-            body="From a single mattress to a full villa handover, every job is handled with the same care."
+            title="Featured junk removal services"
+            body="From a single mattress to a full villa handover, every junk removal job in Dubai is handled with the same care."
           />
           <Link
             href="/services"
             className="link-underline inline-flex shrink-0 items-center gap-1 text-sm font-medium"
           >
-            All services <ArrowUpRight className="h-4 w-4" />
+            All junk removal services <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>
 
@@ -261,7 +263,8 @@ export default function Home() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={s.image}
-                  alt={s.title}
+                  alt={`${s.title} in Dubai`}
+                  title={`${s.title} — Dubai Junk Collection`}
                   fill
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -319,7 +322,8 @@ export default function Home() {
             <div className="relative mt-8 aspect-[4/3] w-full overflow-hidden rounded-2xl">
               <Image
                 src={skylineImg}
-                alt="Dubai skyline at golden hour"
+                alt="Dubai skyline at golden hour — junk removal service areas across the city"
+                title="Dubai junk removal service areas"
                 fill
                 sizes="(min-width: 768px) 42vw, 100vw"
                 className="object-cover"
@@ -329,7 +333,7 @@ export default function Home() {
               href="/service-areas"
               className="link-underline mt-6 inline-flex items-center gap-1 text-sm font-medium"
             >
-              See all 39 communities <ArrowUpRight className="h-4 w-4" />
+              Explore all 39 Dubai service areas <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="md:col-span-6 md:col-start-7">
@@ -397,7 +401,10 @@ export default function Home() {
       {/* REVIEWS */}
       <Reviews />
 
-      <CTASection />
+      <CTASection
+        title="Ready for stress-free junk removal in Dubai?"
+        body="Tell us what needs to go. Our Dubai junk removal crew will be there — often the same day — with the truck, the team and the care your home deserves."
+      />
     </>
   );
 }

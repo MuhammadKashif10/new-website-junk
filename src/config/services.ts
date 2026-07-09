@@ -26,7 +26,7 @@ export const services: Service[] = [
     title: "Household Junk Removal",
     short: "Clear the clutter from any room without lifting a finger.",
     intro:
-      "From a single storeroom clear-out to a full home refresh, our team removes unwanted household items quickly, quietly and with real care for your space.",
+      "From a single storeroom clear-out to a full home refresh, we remove unwanted household items quickly, quietly and with real care for your space. Think of it as general junk removal in Dubai — everyday clutter, garbage and rubbish collected and hauled away in a single visit.",
     image: household,
     benefits: [
       "Same-day and next-day slots across Dubai",
@@ -44,14 +44,14 @@ export const services: Service[] = [
       { q: "How quickly can you come?", a: "In most Dubai communities we can be with you the same day if you book before noon." },
     ],
     seoDescription:
-      "Fast, respectful household junk removal across Dubai. Same-day pickups, uniformed crew and transparent pricing for villas and apartments.",
+      "Reliable household junk removal service in Dubai. Same-day junk pickup plus garbage, rubbish and waste removal for villas and apartments — uniformed crew and transparent, fixed pricing.",
   },
   {
     slug: "furniture-removal",
     title: "Furniture Removal",
     short: "Old sofas, wardrobes, beds and dining sets — collected and taken away.",
     intro:
-      "Replacing a sofa or clearing out a bedroom? We disassemble, carry and remove furniture of any size from apartments, villas and offices across the city.",
+      "Replacing a sofa or clearing out a bedroom? Our furniture removal team in Dubai disassembles, carries and hauls away furniture of any size from apartments, villas and offices across the city — from a single armchair to a whole houseful.",
     image: furniture,
     benefits: [
       "Full dismantling of wardrobes, beds and modular pieces",
@@ -69,14 +69,14 @@ export const services: Service[] = [
       { q: "Do you dismantle beds and wardrobes?", a: "Absolutely. Dismantling is included and no extra charge." },
     ],
     seoDescription:
-      "Professional furniture removal in Dubai. Sofas, beds, wardrobes and office furniture dismantled and taken away with care.",
+      "Professional furniture removal in Dubai. Sofas, beds, wardrobes and office pieces dismantled, collected and taken away for responsible furniture disposal — fixed pricing and careful handling.",
   },
   {
     slug: "office-junk-removal",
     title: "Office Junk Removal",
     short: "Cubicles, desks, chairs and old electronics — cleared after hours.",
     intro:
-      "We work around your business, clearing outdated office furniture and equipment during evenings or weekends so your team never loses a working day.",
+      "Our office junk removal team in Dubai works around your business, clearing outdated office furniture and equipment during evenings or weekends so your team never loses a working day.",
     image: office,
     benefits: [
       "After-hours and weekend clearances available",
@@ -94,14 +94,14 @@ export const services: Service[] = [
       { q: "Do you provide clearance certificates?", a: "Yes, on request, for landlord or head office records." },
     ],
     seoDescription:
-      "Discreet office clearances in Dubai. After-hours removal of desks, chairs, cubicles and electronics for offices of any size.",
+      "Discreet office junk removal and clearances in Dubai. After-hours removal of desks, chairs, cubicles and old electronics for offices of any size.",
   },
   {
     slug: "garden-waste-removal",
     title: "Garden Waste Removal",
     short: "Palm fronds, clippings, soil bags and green cuttings, gone.",
     intro:
-      "After the gardener has been, we take away what is left. Bagged clippings, palm fronds, tree branches and old planters — all cleared in one trip.",
+      "Garden waste removal in Dubai, made simple: after the gardener has been, we take away what's left. Bagged clippings, palm fronds, tree branches and old planters — all cleared in one trip.",
     image: garden,
     benefits: [
       "Ideal for villas in Emirates Hills, Arabian Ranches and Al Barari",
@@ -119,14 +119,14 @@ export const services: Service[] = [
       { q: "Can you come after my gardener?", a: "Yes — many villa owners book us on a standing weekly or monthly slot." },
     ],
     seoDescription:
-      "Garden clearance across Dubai villas: palm fronds, clippings, soil and old planters removed quickly and cleanly.",
+      "Garden waste removal across Dubai villas: palm fronds, clippings, soil and old planters cleared quickly and cleanly, with green waste taken to composting where possible.",
   },
   {
     slug: "appliance-removal",
     title: "Appliance Removal",
     short: "Fridges, washers, ovens and ACs collected and disposed of responsibly.",
     intro:
-      "Upgrading a kitchen or clearing out old white goods? Our team disconnects and removes large appliances safely, without damage to floors or cabinetry.",
+      "Upgrading a kitchen or clearing out old white goods? Our appliance removal team in Dubai disconnects and takes away large appliances safely, without damage to floors or cabinetry.",
     image: appliance,
     benefits: [
       "Safe disconnection of water and drainage",
@@ -144,14 +144,14 @@ export const services: Service[] = [
       { q: "Do you take split-unit ACs?", a: "Yes. Please mention this at booking so we send a qualified technician." },
     ],
     seoDescription:
-      "Appliance removal in Dubai. Safe pickup of fridges, washers, dryers, ovens and split ACs with responsible disposal.",
+      "Appliance removal in Dubai. Safe pickup of fridges, washers, dryers, ovens and split ACs with responsible appliance disposal and recycling.",
   },
   {
     slug: "villa-apartment-cleanouts",
     title: "Villa & Apartment Cleanouts",
     short: "Full property clearances before you move, sell or hand back the keys.",
     intro:
-      "End-of-lease, post-renovation or a full estate clear — we empty an entire home in a single visit and hand it back sparkling ready for the next chapter.",
+      "End-of-lease, post-renovation or a full estate clear — our villa and apartment cleanout team in Dubai empties an entire home in a single visit and hands it back sparkling, ready for the next chapter.",
     image: villa,
     benefits: [
       "Full property clearance in one visit",
@@ -176,7 +176,7 @@ export const services: Service[] = [
     title: "Warehouse & Commercial Junk Removal",
     short: "Pallets, racking, machinery and stock — cleared at scale.",
     intro:
-      "For warehouses, retail units and industrial sites, we bring the crew, the trucks and the planning to clear large volumes on a schedule that suits your operation.",
+      "For warehouses, retail units and commercial sites, our commercial junk removal team in Dubai brings the crew, the trucks and the planning to clear large volumes on a schedule that suits your operation.",
     image: warehouse,
     benefits: [
       "Fleet capacity for multi-trip projects",
@@ -194,14 +194,14 @@ export const services: Service[] = [
       { q: "Do you handle racking?", a: "Yes — dismantling, removal and disposal of shelving and racking is a core service." },
     ],
     seoDescription:
-      "Large-scale warehouse and commercial clearances in Dubai. Racking, pallets, stock and machinery removed with full documentation.",
+      "Large-scale warehouse and commercial junk removal in Dubai. Racking, pallets, old stock and machinery cleared with full documentation.",
   },
   {
     slug: "mattress-bulky-item-removal",
     title: "Mattress & Bulky Item Removal",
     short: "Heavy, awkward pieces collected quickly — often the same day.",
     intro:
-      "Mattresses, mirrors, gym equipment and oversized decor — the pieces most services refuse. We collect them cleanly, without damage to your walls or lift.",
+      "Mattresses, mirrors, gym equipment and oversized decor — the bulky items most services refuse. Our mattress and bulky item removal team in Dubai collects them cleanly, without damage to your walls or lift.",
     image: mattress,
     benefits: [
       "Same-day collection for single items",
@@ -219,7 +219,7 @@ export const services: Service[] = [
       { q: "What about gym equipment?", a: "Treadmills, rowers and multi-gyms are no problem — please share a photo first." },
     ],
     seoDescription:
-      "Same-day pickup of mattresses, gym equipment and bulky items across Dubai. Careful two-person lift and responsible disposal.",
+      "Same-day mattress removal and bulky item pickup across Dubai. Gym equipment, mirrors and oversized pieces removed with a careful two-person lift and responsible disposal.",
   },
 ];
 

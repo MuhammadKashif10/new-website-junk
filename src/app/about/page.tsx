@@ -89,7 +89,7 @@ export default function About() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
               <Image
                 src={skylineImg}
-                alt="Dubai skyline"
+                alt="Dubai skyline — the city Dubai Junk Collection has served since 2016"
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"

@@ -7,8 +7,8 @@ import skylineImg from "@/assets/dubai-skyline.jpg";
 import { MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Service Areas — Dubai Junk Collection Dubai",
-  description: `We serve ${areas.length}+ communities across Dubai — from Palm Jumeirah and Downtown to Arabian Ranches, Dubai Hills and beyond.`,
+  title: "Junk Removal Service Areas in Dubai — Dubai Junk Collection",
+  description: `Junk removal across ${areas.length}+ communities in Dubai — from Palm Jumeirah and Downtown to Arabian Ranches, Dubai Hills and beyond.`,
   alternates: { canonical: "/service-areas" },
   openGraph: {
     title: "Service Areas — Dubai",
@@ -25,7 +25,7 @@ export default function ServiceAreas() {
       <PageHero
         eyebrow="Where we work"
         title="Trusted in every corner of Dubai."
-        subtitle={`Our crews know the buildings, the security desks and the shortcuts across ${areas.length}+ communities.`}
+        subtitle={`From single-item junk pickups to full villa cleanouts, our crews know the buildings, the security desks and the shortcuts across ${areas.length}+ Dubai communities.`}
       />
 
       <section className="container-x py-20">
@@ -68,7 +68,7 @@ export default function ServiceAreas() {
             Live somewhere not listed? We probably still cover it — just ask.
           </p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
-            <Link href="/services" className="link-underline font-medium">Browse our services →</Link>
+            <Link href="/services" className="link-underline font-medium">Browse our junk removal services →</Link>
             <Link href="/contact" className="link-underline font-medium">Book a pickup →</Link>
           </div>
         </div>

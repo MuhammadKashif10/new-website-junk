@@ -146,7 +146,8 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
               What you can expect.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              A team that treats {svc.title.toLowerCase()} the way you would if you had the time, the truck and the crew.
+              A team that treats {svc.title.toLowerCase()} the way you would if you had the time, the truck and the crew. Ready when you are —{" "}
+              <Link href="/contact" className="link-underline font-medium">get in touch</Link> for a fixed price.
             </p>
           </div>
           <div className="md:col-span-6 md:col-start-7">
@@ -236,7 +237,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={o.image}
-                    alt={o.title}
+                    alt={`${o.title} in Dubai`}
                     fill
                     sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"

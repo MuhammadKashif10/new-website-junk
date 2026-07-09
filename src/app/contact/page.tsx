@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact Dubai Junk Collection",
-    description: "Get in touch to book your Dubai clearance — call or message us on WhatsApp for a fast, fixed quote.",
+    description: "Get in touch to book your Dubai junk removal — call or message us on WhatsApp for a fast, fixed price.",
     url: "/contact",
     images: [skylineImg.src],
   },

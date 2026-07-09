@@ -8,13 +8,13 @@ import { services } from "@/config/services";
 import { absoluteUrl } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Services — Dubai Junk Collection Dubai",
+  title: "Junk Removal Services in Dubai — Dubai Junk Collection",
   description:
-    "Explore our full range of Dubai clearance services: household, furniture, office, garden, appliance, villa, warehouse and mattress removal.",
+    "Explore our full range of junk removal services in Dubai: household, furniture, office, garden waste, appliance, villa, warehouse and mattress removal.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "Services — Dubai Junk Collection Dubai",
-    description: "The full range of clearance services we offer across Dubai.",
+    title: "Junk Removal Services in Dubai — Dubai Junk Collection",
+    description: "The full range of junk removal and clearance services we offer across Dubai.",
     url: "/services",
     images: [services[0].image.src],
   },
@@ -50,8 +50,8 @@ export default function ServicesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceListLd) }} />
       <PageHero
         eyebrow="Services"
-        title="Everything we clear, in one place."
-        subtitle="From single-item pickups to full property handovers, choose the service that fits — or message us and we'll suggest the right one."
+        title="Every junk removal service, in one place."
+        subtitle="From single-item pickups to full property handovers, choose the junk removal service that fits — or message us and we'll suggest the right one."
       />
 
       <section className="container-x py-20">
@@ -65,7 +65,8 @@ export default function ServicesPage() {
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
                   src={s.image}
-                  alt={s.title}
+                  alt={`${s.title} service in Dubai`}
+                  title={`${s.title} — Dubai Junk Collection`}
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
