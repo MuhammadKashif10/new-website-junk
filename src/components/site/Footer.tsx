@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { site } from "@/config/site";
 import { services } from "@/config/services";
@@ -47,7 +47,7 @@ export function Footer() {
               { to: "/contact", label: "Contact" },
             ].map((l) => (
               <li key={l.to}>
-                <Link to={l.to} className="text-muted-foreground transition-colors hover:text-foreground">
+                <Link href={l.to} className="text-muted-foreground transition-colors hover:text-foreground">
                   {l.label}
                 </Link>
               </li>
@@ -61,8 +61,7 @@ export function Footer() {
             {services.slice(0, 6).map((s) => (
               <li key={s.slug}>
                 <Link
-                  to="/services/$slug"
-                  params={{ slug: s.slug }}
+                  href={`/services/${s.slug}`}
                   className="text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {s.title}

@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* --font-montserrat / --font-aleo are injected on <html> by next/font
+     (see src/app/layout.tsx). Same families as before — self-hosted now. */
+  --font-sans: var(--font-montserrat), "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-aleo), "Aleo", ui-serif, Georgia, serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-ink: var(--ink);
+  --color-sand: var(--sand);
+  --color-bronze: var(--bronze);
+  --color-bronze-soft: var(--bronze-soft);
+  --color-cream: var(--cream);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Warm luxury palette */
+  --background: oklch(0.982 0.008 85);       /* warm cream */
+  --foreground: oklch(0.22 0.015 60);        /* deep ink */
+  --cream: oklch(0.972 0.012 85);
+  --sand: oklch(0.93 0.02 80);
+  --ink: oklch(0.22 0.015 60);
+  --bronze: oklch(0.58 0.09 55);             /* muted bronze accent */
+  --bronze-soft: oklch(0.82 0.05 70);
+
+  --card: oklch(1 0 0);
+  --card-foreground: var(--ink);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--ink);
+
+  --primary: oklch(0.22 0.015 60);           /* ink as primary */
+  --primary-foreground: oklch(0.982 0.008 85);
+  --secondary: oklch(0.93 0.02 80);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.94 0.015 80);
+  --muted-foreground: oklch(0.45 0.015 60);
+  --accent: oklch(0.58 0.09 55);
+  --accent-foreground: oklch(0.99 0.005 85);
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: oklch(0.99 0.005 85);
+
+  --border: oklch(0.88 0.015 80);
+  --input: oklch(0.88 0.015 80);
+  --ring: oklch(0.58 0.09 55);
+
+  --chart-1: oklch(0.58 0.09 55);
+  --chart-2: oklch(0.45 0.05 70);
+  --chart-3: oklch(0.72 0.06 60);
+  --chart-4: oklch(0.35 0.02 60);
+  --chart-5: oklch(0.85 0.04 80);
+
+  --shadow-elegant: 0 24px 60px -30px color-mix(in oklab, var(--ink) 30%, transparent);
+  --gradient-warm: linear-gradient(135deg, oklch(0.972 0.012 85) 0%, oklch(0.92 0.03 75) 100%);
+}
+
+.dark {
+  --background: oklch(0.18 0.01 60);
+  --foreground: oklch(0.97 0.008 85);
+  --card: oklch(0.22 0.012 60);
+  --card-foreground: oklch(0.97 0.008 85);
+  --popover: oklch(0.22 0.012 60);
+  --popover-foreground: oklch(0.97 0.008 85);
+  --primary: oklch(0.97 0.008 85);
+  --primary-foreground: oklch(0.18 0.01 60);
+  --secondary: oklch(0.28 0.015 60);
+  --secondary-foreground: oklch(0.97 0.008 85);
+  --muted: oklch(0.28 0.015 60);
+  --muted-foreground: oklch(0.72 0.02 70);
+  --accent: oklch(0.65 0.1 55);
+  --accent-foreground: oklch(0.15 0.01 60);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.65 0.1 55);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    color: var(--color-foreground);
+  }
+  /* Visible keyboard-focus indicator for all interactive elements.
+     Applies only on keyboard focus (:focus-visible) so mouse/touch
+     interaction is unchanged. */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  summary:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+}
+
+@utility eyebrow {
+  @apply inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.22em] text-[color:var(--color-accent)];
+}
+
+@utility link-underline {
+  @apply relative after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@utility animate-rise {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@utility animate-fade {
+  animation: fade 0.9s ease-out both;
+}

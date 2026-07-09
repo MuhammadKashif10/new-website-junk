@@ -1,7 +1,7 @@
 // Single source of truth for contact info & branding.
 // Change the phone number here to update the whole site.
 export const site = {
-  name: "Marhaba Clearance",
+  name: "Dubai Junk Collection",
   tagline: "Dubai's discreet junk removal service",
   // TODO: replace the placeholder phone/WhatsApp numbers below with the real
   // business numbers. Every CTA on the site reads from these two values.
@@ -9,13 +9,12 @@ export const site = {
   phoneHref: "tel:+971501234567",
   whatsapp: "+971 50 123 4567",
   whatsappHref: "https://wa.me/971501234567",
-  email: "hello@marhabaclearance.ae",
+  email: "hello@dubaijunkcollection.com",
   address: "Al Quoz Industrial 3, Dubai, United Arab Emirates",
   hours: "Every day · 7:00 – 22:00",
-  // Production domain. Leave empty until the domain is live — the moment a value
-  // is set here, all canonical/OG/sitemap URLs become absolute automatically.
-  // e.g. "https://marhabaclearance.ae" (no trailing slash)
-  url: "",
+  // Production domain (no trailing slash). Every canonical/OG/Twitter/sitemap/
+  // robots/JSON-LD URL is derived from this single value — update it here only.
+  url: "https://dubaijunkcollection.com",
 } as const;
 
 // Build an absolute URL from a path when the production domain is configured.

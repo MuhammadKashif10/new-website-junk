@@ -1,4 +1,7 @@
-import { Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { site } from "@/config/site";
@@ -14,6 +17,7 @@ const nav = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -31,13 +35,15 @@ export function Navbar() {
       }`}
     >
       <div className="container-x flex h-20 items-center justify-between gap-4">
-        <Link to="/" className="flex min-w-0 items-center gap-3">
+        <Link href="/" className="flex min-w-0 items-center gap-3">
+          {/* Temporary text-based brand mark ("DJC" monogram for Dubai Junk
+              Collection). Swap this <span> for the final logo asset when ready. */}
           <span
             aria-hidden
-            className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[color:var(--color-ink)] text-[color:var(--color-cream)]"
+            className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[color:var(--color-ink)] text-[11px] font-semibold tracking-tight text-[color:var(--color-cream)]"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            M
+            DJC
           </span>
           <span className="truncate">
             <span
@@ -53,16 +59,20 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="link-underline text-sm text-foreground/80 transition-colors hover:text-foreground"
-              activeProps={{ className: "text-foreground" }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) => {
+            const active = pathname === item.to;
+            return (
+              <Link
+                key={item.to}
+                href={item.to}
+                className={`link-underline text-sm transition-colors hover:text-foreground ${
+                  active ? "text-foreground" : "text-foreground/80"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
@@ -96,17 +106,21 @@ export function Navbar() {
       {open && (
         <div id="mobile-menu" className="border-t border-border bg-background lg:hidden">
           <div className="container-x flex flex-col gap-1 py-4">
-            {nav.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-3 text-base text-foreground/85 hover:bg-muted"
-                activeProps={{ className: "bg-muted text-foreground" }}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {nav.map((item) => {
+              const active = pathname === item.to;
+              return (
+                <Link
+                  key={item.to}
+                  href={item.to}
+                  onClick={() => setOpen(false)}
+                  className={`rounded-md px-3 py-3 text-base hover:bg-muted ${
+                    active ? "bg-muted text-foreground" : "text-foreground/85"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
             <div className="mt-2 flex gap-2">
               <a
                 href={site.phoneHref}

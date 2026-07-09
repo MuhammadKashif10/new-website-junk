@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import type { StaticImageData } from "next/image";
+import Image from "next/image";
 
 export function PageHero({
   eyebrow,
@@ -11,7 +13,7 @@ export function PageHero({
   eyebrow?: string;
   title: string;
   subtitle?: string;
-  image?: string;
+  image?: string | StaticImageData;
   /** Describe the image for screen readers/SEO. Leave empty for decorative images. */
   imageAlt?: string;
   children?: ReactNode;
@@ -37,13 +39,13 @@ export function PageHero({
         {image && (
           <div className="animate-fade">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl md:aspect-[5/6]">
-              <img
+              <Image
                 src={image}
                 alt={imageAlt}
-                className="h-full w-full object-cover"
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
+                fill
+                priority
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
               />
             </div>
           </div>

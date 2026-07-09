@@ -1,3 +1,4 @@
+import type { StaticImageData } from "next/image";
 import household from "@/assets/service-household.jpg";
 import furniture from "@/assets/service-furniture.jpg";
 import office from "@/assets/service-office.jpg";
@@ -12,7 +13,7 @@ export type Service = {
   title: string;
   short: string;
   intro: string;
-  image: string;
+  image: StaticImageData;
   benefits: string[];
   process: { title: string; body: string }[];
   faqs: { q: string; a: string }[];
